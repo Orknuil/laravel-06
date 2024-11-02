@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('reaction_types', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string(column: 'type');
             $table->boolean('Like');
+            $table->boolean('Heart');
+            $table->boolean('Care');
+            $table->boolean('Angry');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -28,7 +28,10 @@ class DatabaseSeeder extends Seeder
         ]);
         ReactionType::factory()->create([
             'type' => 'ReactionType',
-            'Like' => 'true',
+            'Like'=> false,
+            'Heart'=> false,
+            'Care'=> false,
+            'Angry'=> false,
         ]);
     }
 }
