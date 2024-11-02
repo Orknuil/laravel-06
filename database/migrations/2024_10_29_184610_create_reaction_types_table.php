@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('reaction_types', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->string('Like');
+            $table->boolean('Like');
             $table->timestamps();
             $table->softDeletes();
         });
