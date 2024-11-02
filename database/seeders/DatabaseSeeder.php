@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\ReactionType;
+
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use Illuminate\Database\Seeder;
@@ -23,6 +25,10 @@ class DatabaseSeeder extends Seeder
             'mobile' => '01024750245',
             'password' => Hash::make('password'),
             'roles' => 'admin',
+        ]);
+        ReactionType::factory()->create([
+            'type' => 'ReactionType',
+            'Like' => 'true',
         ]);
     }
 }
